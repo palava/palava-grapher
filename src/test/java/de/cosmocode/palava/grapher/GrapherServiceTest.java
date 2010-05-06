@@ -23,7 +23,7 @@ import org.junit.Assert;
 import org.junit.Test;
 
 import de.cosmocode.palava.core.Framework;
-import de.cosmocode.palava.core.FrameworkLoader;
+import de.cosmocode.palava.core.Palava;
 
 
 /**
@@ -43,7 +43,7 @@ public final class GrapherServiceTest {
         final File file = new File("graph.dot");
         file.delete();
         Assert.assertFalse(file.exists());
-        final Framework framework = FrameworkLoader.load();
+        final Framework framework = Palava.newFramework();
         framework.start();
         framework.getInstance(GrapherService.class).execute();
         framework.stop();
