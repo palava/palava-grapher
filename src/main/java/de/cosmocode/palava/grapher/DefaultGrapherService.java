@@ -21,6 +21,9 @@ import java.io.IOException;
 import java.io.PrintWriter;
 import java.nio.charset.Charset;
 
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+
 import com.google.common.base.Charsets;
 import com.google.common.base.Preconditions;
 import com.google.inject.Inject;
@@ -40,6 +43,8 @@ import de.cosmocode.palava.core.lifecycle.LifecycleException;
  * @author Willi Schoenborn
  */
 final class DefaultGrapherService implements GrapherService, Initializable, Executable {
+    
+    private static final Logger LOG = LoggerFactory.getLogger(DefaultGrapherService.class);
 
     private final GraphvizRenderer renderer;
     
@@ -82,6 +87,7 @@ final class DefaultGrapherService implements GrapherService, Initializable, Exec
     @Override
     public void execute() throws LifecycleException {
         try {
+            LOG.debug("Graphing application");
             grapher.graph();
         } catch (IOException e) {
             throw new LifecycleException(e);
