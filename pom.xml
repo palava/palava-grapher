@@ -8,9 +8,9 @@
   <groupId>de.cosmocode.palava</groupId>
   <artifactId>palava-grapher</artifactId>
   <name>Palava Grapher</name>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0</version>
   <scm>
-    <developerConnection>scm:svn:https://palava.svn.cosmocode.de/palava-grapher/trunk</developerConnection>
+    <developerConnection>scm:svn:https://palava.svn.cosmocode.de/palava-grapher/tags/1.0.0</developerConnection>
   </scm>
   <dependencies>
     <dependency>
