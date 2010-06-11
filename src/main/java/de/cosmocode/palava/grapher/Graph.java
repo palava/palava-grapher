@@ -20,6 +20,7 @@ import java.util.Map;
 
 import com.google.common.base.Preconditions;
 import com.google.inject.Inject;
+import com.google.inject.Singleton;
 
 import de.cosmocode.palava.ipc.IpcCall;
 import de.cosmocode.palava.ipc.IpcCommand;
@@ -33,6 +34,7 @@ import de.cosmocode.palava.ipc.IpcCommand.Description;
  * @author Willi Schoenborn
  */
 @Description("Triggers a GrapherService execution.")
+@Singleton
 public final class Graph implements IpcCommand {
 
     private final GrapherService service;
