@@ -41,7 +41,7 @@ public final class GrapherServiceTest {
     @Test
     public void execute() throws IOException {
         final File file = new File("graph.dot");
-        Assert.assertTrue(file.delete());
+        file.delete();
         Assert.assertFalse(file.exists());
         final Framework framework = Palava.newFramework();
         framework.start();
