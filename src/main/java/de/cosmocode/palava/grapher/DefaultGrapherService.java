@@ -32,7 +32,6 @@ import com.google.inject.grapher.InjectorGrapher;
 import com.google.inject.grapher.graphviz.GraphvizRenderer;
 import com.google.inject.name.Named;
 
-import de.cosmocode.palava.core.lifecycle.Executable;
 import de.cosmocode.palava.core.lifecycle.Initializable;
 import de.cosmocode.palava.core.lifecycle.LifecycleException;
 
@@ -42,7 +41,7 @@ import de.cosmocode.palava.core.lifecycle.LifecycleException;
  *
  * @author Willi Schoenborn
  */
-final class DefaultGrapherService implements GrapherService, Initializable, Executable {
+final class DefaultGrapherService implements GrapherService, Initializable {
     
     private static final Logger LOG = LoggerFactory.getLogger(DefaultGrapherService.class);
 
